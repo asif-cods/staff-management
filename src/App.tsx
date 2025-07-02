@@ -3,6 +3,7 @@ import './App.css'
 import Dashboard  from './pages/Dashboard'
 import EmpMang from './pages/EmpMang'
 import Login from './pages/Login'
+import NotFound from './components/NotFound'
 import Header from './components/Header'
 import ProtectedRoute from './routes/ProtectedRoute'
 import Alert from './components/Alert'
@@ -33,6 +34,7 @@ function App() {
           <Route element={<ProtectedRoute />}> { /* // Route inside this are protected, only after login we can access this page */ }
             <Route path={'/dashboard'} element={<Dashboard />} />
             <Route path={'/emp-mang'} element={<EmpMang />} />
+            <Route path={'*'} element={<NotFound />} />
           </Route>
        
         </Routes>
