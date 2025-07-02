@@ -11,7 +11,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from '../redux/app/store';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { logout } from '../redux/slices/authSlice';
 import { ListItem, ListItemButton ,Drawer, List, ListItemText } from '@mui/material';
 
@@ -26,7 +26,7 @@ const Header = () => {
     const [mobileOpen, setMobileOpen] = React.useState<boolean | undefined>(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const CurrentLocation = useLocation();
+  const location = useLocation();
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -92,7 +92,7 @@ const Header = () => {
                       variant="subtitle1"
                       sx={{
                         fontSize: '18px',
-                        color: location.pathname === link.path ? '#bdbdbd' : 'white',//  #bdbdbd   cfd8dc
+                        color: location.pathname === link.path ? ' #bdbdbd' : 'white',//  #bdbdbd   cfd8dc
                         fontWeight: location.pathname === link.path ? 700 : 400,
                         position: 'relative',
                         transition: 'color 0.3s ease-in-out',

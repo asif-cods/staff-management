@@ -126,6 +126,7 @@ const Dashboard = () => {
     { label: "Unique Cities", value: uniqueCities.length, subtitle: "+8% since last year" },
   ];
 
+
   return (
     <Container maxWidth="xl" sx={{ mt:5, mb:5,width: "95%", padding: "1px 20px" }}>
 
@@ -190,7 +191,11 @@ const Dashboard = () => {
               {/* Image Box */}
               <Box sx={{ order: { xs: 1, md: 0 }, mb: { xs: 1, md: 0 } }}>
                 <img
-                  src={`/icons/icon${idx + 1}.png`}
+                  // src={`/icons/icon${idx + 1}.png`} 
+                  // src={`${import.meta.env.BASE_URL}icons/icon${idx + 1}.png`}
+                  src={`${import.meta.env.BASE_URL}icons/icon${idx + 1}.png`}
+                  // src={`https://asif-cods.github.io/staff-management/icons/icon${idx + 1}.png`}
+
                   alt="icon"
                   width={40}
                   height={40}
