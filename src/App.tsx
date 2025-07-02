@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/staff-management">
         <Header />
         <Box sx={{ pt: { xs: '56px', md: '64px' }, px: 2 }}>
                     <Alert />
