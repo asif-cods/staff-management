@@ -226,7 +226,8 @@ const UserFormDialog = ({ open, onClose, onSubmit, initialData, mode = "add", }:
               label="Age"
               name="age"
               type="number"
-              value={formData.age}
+              // value={formData.age}
+              value={formData.age === 0 ? "" : formData.age}
               onChange={handleChange}
               disabled={disabled}
             //   inputProps={{ min: 0 }}
